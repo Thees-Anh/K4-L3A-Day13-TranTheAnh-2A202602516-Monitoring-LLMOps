@@ -7,7 +7,11 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: >-
+    Trong cửa sổ 28 ngày, tối đa 0.5% request được phép lỗi hoặc vượt 3000 ms.
+    Tương đương 500 bad requests trên mỗi 100000 requests; nếu quy đổi theo thời
+    gian thì error budget là 201.6 phút trên 28 ngày. Baseline CP1 có P95 khoảng
+    1.1 giây nên ngưỡng 3 giây tạo đủ khoảng đệm nhưng vẫn phát hiện tail latency.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5

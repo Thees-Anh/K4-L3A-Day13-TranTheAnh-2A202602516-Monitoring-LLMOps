@@ -18,6 +18,10 @@ except ImportError:  # pragma: no cover - chỉ dùng khi chưa cài requirement
         return decorator
 
     class _DummyClient:
+        @contextmanager
+        def start_as_current_observation(self, **kwargs: Any):
+            yield self
+
         def update_current_span(self, **kwargs: Any) -> None:
             return None
 

@@ -83,6 +83,13 @@ python scripts/validate_dashboard.py
 python -m pytest -q
 ```
 
+Chạy dashboard runtime local ở terminal thứ ba, sau đó mở
+`http://127.0.0.1:8501`:
+
+```bash
+python scripts/dashboard.py
+```
+
 Baseline log chưa đạt là bình thường vì các `TODO` của CP1 chưa được làm. Ghi lại kết quả baseline vào `submission/REPORT.md` trước khi sửa.
 
 ## Lộ trình 14:00–18:00 (240 phút)
